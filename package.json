@@ -1,0 +1,18 @@
+{
+  "name": "batonz-cli",
+  "version": "0.1.0",
+  "private": true,
+  "description": "BATONZ公開案件を内部APIから取得する非公式CLI",
+  "type": "module",
+  "license": "MIT",
+  "bin": { "batonz": "dist/cli.js" },
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test test/*.test.ts",
+    "check": "npm run typecheck && npm test && npm run build"
+  },
+  "dependencies": { "commander": "^14.0.0", "playwright-core": "^1.56.0", "zod": "^4.1.0" },
+  "devDependencies": { "@types/node": "^22.0.0", "tsx": "^4.20.0", "typescript": "^5.9.0" }
+}
